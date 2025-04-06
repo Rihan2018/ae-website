@@ -1,33 +1,32 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-  }
-  
-  header {
-    background: #0070f3;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  section {
-    padding: 2rem;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #eee;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
 
-  .logo {
-    width: 150px;        /* You can change this value to whatever size you want */
-    height: auto;        /* Maintains the image's original aspect ratio */
-    display: block;
-    margin: 0 auto 1rem; /* Centers the image */
-  }
-  
-  
+.hero-header {
+  background: url('../images/logo.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.header-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for contrast */
+  padding: 2rem;
+  border-radius: 8px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
