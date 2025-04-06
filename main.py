@@ -61,6 +61,9 @@ else:
 # Step 7: Push to GitHub
 print("🚀 Pushing to GitHub...")
 run_command(["git", "branch", "-M", "main"], check=False)
+
+# Pull before push (safe option)
+run_command(["git", "pull", "origin", "main", "--rebase"], desc="🔄 Pulling latest changes from remote...")
+
 run_command(["git", "push", "-u", "origin", "main"])
 
-print("✅ Done! Your site has been pushed and Vercel will redeploy.")
