@@ -23,11 +23,6 @@ body {
     background: #eee;
   }
 
-  .logo {
-    width: 300px;        /* You can change this value to whatever size you want */
-    height: auto;        /* Maintains the image's original aspect ratio */
-    display: block;
-    margin: 0 auto 1rem; /* Centers the image */
-  }
+
   
   
