@@ -5,6 +5,7 @@ import sys
 # Step 1: Run build.py
 print("🔨 Running build.py...")
 subprocess.run([sys.executable, "build.py"], check=True)
+subprocess.run(["git", "add", "."], check=True)
 
 # Step 2: Initialize Git if not already a repo
 if not os.path.exists(".git"):
