@@ -6,35 +6,23 @@ body {
   color: #333;
 }
 
-header {
-  position: relative;
-  height: 300px; /* Adjust height as needed */
-  overflow: hidden;
+.hero-header {
+  background: url('../images/logo.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Full screen height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-header img.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-header .header-content {
   position: relative;
-  z-index: 1;
   color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-section {
+.header-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for contrast */
   padding: 2rem;
+  border-radius: 8px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 footer {
