@@ -4,7 +4,7 @@ import os
 env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template('index.html.j2')
 
-html_content = template.render(company="AE Corp", description="We build cool stuff.")
+html_content = template.render(company="Astronaut Entertainment", description="NORTH AMERICA CONCERT PROMOTER")
 
 with open("index.html", "w") as f:
     f.write(html_content)
