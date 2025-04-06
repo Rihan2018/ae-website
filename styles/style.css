@@ -7,16 +7,16 @@ body {
 }
 
 .hero-header {
-  background: url('../images/logo.png') no-repeat center center;
   background-size: cover;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  color: white;
+  color: #333;
 }
+
 
 .header-content {
   background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for contrast */
