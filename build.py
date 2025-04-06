@@ -19,5 +19,3 @@ with open("index.html", "w") as f:
 # Copy stylesheet
 os.makedirs("styles", exist_ok=True)
 shutil.copy("static/style.css", "styles/style.css")
-
-
