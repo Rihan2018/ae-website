@@ -20,6 +20,10 @@ body {
   box-sizing: border-box;
   position: relative;
 }
+.header-content h1,
+.header-content p {
+  color: #ffffff; /* white text */
+}
 
 
 .header-content {
