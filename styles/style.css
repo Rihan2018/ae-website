@@ -17,22 +17,6 @@ body {
   overflow: hidden;
 }
 
-.hero-title {
-  font-size: 2rem; /* 🔽 Smaller text */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
-  margin-bottom: 0.25rem;
-}
-
-.hero-subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: 1.5px;
-  margin: 0;
-}
-
 
 /* 📌 Logo */
 .logo-fixed {
@@ -82,13 +66,6 @@ footer {
     padding: 3rem 1rem 2rem;
   }
 
-  .hero-title {
-    font-size: 1rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.6rem;
-  }
 
   .logo-fixed {
     width: 60px;
