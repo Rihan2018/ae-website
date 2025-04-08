@@ -28,6 +28,19 @@ body {
   margin: 0.25rem 0;
 }
 
+.scrolling-window {
+  width: 100%;
+  max-width: 800px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 .logo-fixed {
   position: absolute;
   top: 1rem;
