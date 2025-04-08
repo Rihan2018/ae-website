@@ -8,17 +8,18 @@ body {
 
 .hero-header {
   width: 100vw;
-  height: 100vh;
+  min-height: 200px;          /* 🔹 Narrower header height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  background-color: #000000; /* black background */
+  background-color: #000000;  /* Black background */
   box-sizing: border-box;
   position: relative;
 }
+
 
 .header-content {
   max-width: 500px;
