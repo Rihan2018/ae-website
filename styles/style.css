@@ -11,34 +11,23 @@ body {
   color: #ffffff;            /* White text */
   padding: 2rem;
   text-align: center;
+  position: relative;
+  z-index: 10; /* Ensures header is on top */
 }
 
-/* 💥 This is the key part – remove background! */
 .header-content {
-  background: none !important;  /* override anything white */
-  padding: 0;
+  margin-top: 0;
+}
+
+.header-content h1 {
   margin: 0;
-  box-shadow: none;
-  border: none;
+  font-size: 2rem;
 }
 
-.header-content h1,
 .header-content p {
-  color: #ffffff;
-  margin: 0.25rem 0;
-}
-
-.scrolling-window {
-  width: 100%;
-  max-width: 800px;
-  height: 200px;
-  overflow-y: auto;
-  background-color: #f4f4f4;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .logo-fixed {
@@ -50,9 +39,42 @@ body {
   z-index: 10;
 }
 
+.scrolling-window {
+  width: 100%;
+  max-width: 800px;
+  height: 300px; /* height of the scrolling window */
+  overflow-y: auto; /* enables scrolling */
+  background-color: #f4f4f4; /* background color for scrolling box */
+  margin: 2rem auto; /* centers it horizontally and adds spacing */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
   font-size: 0.9rem;
 }
+
+/* 📱 Mobile tweaks */
+@media (max-width: 480px) {
+  .hero-header {
+    padding: 1rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .logo-fixed {
+    max-width: 60px;
+  }
+
+  .scrolling
