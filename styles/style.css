@@ -67,8 +67,4 @@ footer {
   .logo-fixed {
     width: 60px; /* smaller logo for mobile */
   }
-
-  .scrolling-images img {
-    height: 150px; /* smaller images on small screens */
-  }
 }
