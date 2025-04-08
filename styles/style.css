@@ -6,15 +6,34 @@ body {
   color: #333;
 }
 
-/* 🔲 Header */
+/* Modern black gradient banner with subtle style */
 .hero-header {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 1rem;
+  background: linear-gradient(to right, #000000, #1a1a1a); /* Soft black gradient */
+  color: #ffffff;
+  padding: 4rem 1rem 3rem;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* thin divider */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
+.hero-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero-header p {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Logo remains fixed in top-left */
 .logo-fixed {
   position: absolute;
   top: 1rem;
@@ -22,6 +41,7 @@ body {
   width: 80px;
   height: auto;
   z-index: 10;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.2)); /* subtle glow */
 }
 
 /* 🖼️ Horizontal scroll section */
