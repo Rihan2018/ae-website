@@ -83,7 +83,7 @@ footer {
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .hero-subtitle {
@@ -94,7 +94,4 @@ footer {
     width: 60px;
   }
 
-  .scrolling-images img {
-    height: 150px;
-  }
 }
