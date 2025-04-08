@@ -16,7 +16,6 @@ body {
   text-align: center;
   padding: 2rem;
   background-color: #000000; /* black background */
-  color: #ffffff;            /* white text */
   box-sizing: border-box;
   position: relative;
 }
@@ -24,13 +23,16 @@ body {
 .header-content {
   max-width: 500px;
   width: 100%;
+  background-color: #ffffff; /* white content box */
   padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 
 .header-content h1,
 .header-content p {
-  color: #ffffff; /* ensure white text inside */
+  color: #000000; /* black text inside white box */
 }
 
 .logo-fixed {
