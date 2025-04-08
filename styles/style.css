@@ -17,11 +17,17 @@ body {
 }
 
 .header-content {
-  width: 100vw;
-  background-color: #ffffff;
-  padding: 2rem 0;
+  position: relative;
+  width: 100vw;               /* full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;         /* shift back to align full width */
+  margin-right: -50vw;
+  background-color: #ffffff;  /* your desired background */
+  padding: 2rem;
   box-sizing: border-box;
 }
+
 
 .header-inner {
   max-width: 500px;
