@@ -1,3 +1,4 @@
+/* Basic layout */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,15 +7,26 @@ body {
   color: #333;
 }
 
-/* Black top header */
+/* 🔲 Header styling */
 .hero-header {
-  background-color: #000;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   padding: 2rem 1rem;
   text-align: center;
+  position: relative;
 }
 
-/* Scrollable box below the header */
+/* 🎯 Fixed logo in top-left */
+.logo-fixed {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 80px;
+  height: auto;
+  z-index: 10;
+}
+
+/* 🪟 Scrollable content box */
 .scrolling-window {
   max-width: 800px;
   height: 300px;
@@ -27,10 +39,34 @@ body {
   box-sizing: border-box;
 }
 
-/* Footer */
+/* 🔻 Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
   font-size: 0.9rem;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 480px) {
+  .hero-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .logo-fixed {
+    width: 60px;
+  }
+
+  .hero-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-header p {
+    font-size: 0.9rem;
+  }
+
+  .scrolling-window {
+    max-width: 90%;
+    height: 250px;
+  }
 }
