@@ -6,75 +6,31 @@ body {
   color: #333;
 }
 
+/* Black top header */
 .hero-header {
-  background-color: #000000; /* Black background */
-  color: #ffffff;            /* White text */
-  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1rem;
   text-align: center;
-  position: relative;
-  z-index: 10; /* Ensures header is on top */
 }
 
-.header-content {
-  margin-top: 0;
-}
-
-.header-content h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.header-content p {
-  margin: 0.5rem 0 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-.logo-fixed {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 80px;
-  height: auto;
-  z-index: 10;
-}
-
+/* Scrollable box below the header */
 .scrolling-window {
-  width: 100%;
   max-width: 800px;
-  height: 300px; /* height of the scrolling window */
-  overflow-y: auto; /* enables scrolling */
-  background-color: #f4f4f4; /* background color for scrolling box */
-  margin: 2rem auto; /* centers it horizontally and adds spacing */
+  height: 300px;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+  margin: 2rem auto;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
   font-size: 0.9rem;
 }
-
-/* 📱 Mobile tweaks */
-@media (max-width: 480px) {
-  .hero-header {
-    padding: 1rem;
-  }
-
-  .header-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .header-content p {
-    font-size: 0.9rem;
-  }
-
-  .logo-fixed {
-    max-width: 60px;
-  }
-
-  .scrolling
