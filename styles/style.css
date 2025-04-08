@@ -7,14 +7,20 @@ body {
 }
 
 .hero-header {
-  min-height: 60vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  flex-direction: column; /* stack items vertically */
+  background-color: #000000; /* 🔥 black background */
+  color: #ffffff;            /* optional: white text for contrast */
+  box-sizing: border-box;
+  position: relative;
 }
+
 
 .header-content {
   position: relative;
