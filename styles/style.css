@@ -7,16 +7,32 @@ body {
   color: #333;
 }
 
-/* 🔲 Modern Header Banner */
 .hero-header {
   background: linear-gradient(135deg, #000000 0%, #1f1f1f 100%);
   color: #fff;
-  padding: 5rem 1rem 4rem;
+  padding: 2rem 1rem; /* 🔽 Shrinks the header */
   text-align: center;
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   overflow: hidden;
 }
+
+.hero-title {
+  font-size: 2rem; /* 🔽 Smaller text */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+  margin-bottom: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
 
 /* 📌 Logo */
 .logo-fixed {
@@ -29,23 +45,7 @@ body {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.1));
 }
 
-/* ✨ Title */
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  margin-bottom: 0.5rem;
-}
 
-/* 🧾 Subtitle */
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 2px;
-  margin: 0;
-}
 
 /* 🖼️ Horizontally scrollable image strip */
 .scrolling-images {
