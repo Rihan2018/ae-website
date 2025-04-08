@@ -7,25 +7,25 @@ body {
 }
 
 .hero-header {
-  background-color: #000000; /* black background */
-  color: #ffffff;            /* white text */
+  background-color: #000000; /* Black background */
+  color: #ffffff;            /* White text */
   padding: 2rem;
   text-align: center;
 }
 
+/* 💥 This is the key part – remove background! */
 .header-content {
-  margin-top: 0;
-}
-
-.header-content h1 {
+  background: none !important;  /* override anything white */
+  padding: 0;
   margin: 0;
-  font-size: 2rem;
+  box-shadow: none;
+  border: none;
 }
 
+.header-content h1,
 .header-content p {
-  margin: 0.5rem 0 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0.25rem 0;
 }
 
 .logo-fixed {
@@ -42,23 +42,4 @@ footer {
   padding: 1rem;
   background: #eee;
   font-size: 0.9rem;
-}
-
-/* 📱 Mobile tweaks */
-@media (max-width: 480px) {
-  .hero-header {
-    padding: 1rem;
-  }
-
-  .header-content h1 {
-    font-size: 1.6rem;
-  }
-
-  .header-content p {
-    font-size: 0.9rem;
-  }
-
-  .logo-fixed {
-    max-width: 60px;
-  }
 }
