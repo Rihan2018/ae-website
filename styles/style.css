@@ -72,3 +72,39 @@ footer {
   }
 
 }
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.hamburger-icon {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #111;
+  padding: 10px 0;
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.menu-items a {
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.menu-items a:hover {
+  background-color: #333;
+}
+
