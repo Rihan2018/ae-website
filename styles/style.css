@@ -201,16 +201,17 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center center;
+  z-index: 1;
+  position: relative;
 }
 
-.past-events .event-card img:hover {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(2);
+.past-events .event-card:hover img {
+  transform: scale(2) translate(0, 0);
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 
