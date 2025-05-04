@@ -125,6 +125,7 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 15px;
+  overflow: visible;
 }
 
 .event-card img {
@@ -192,6 +193,7 @@ body {
   background: none;
   padding: 0;
   box-shadow: none;
+  overflow: visible;
 }
 
 .past-events .event-card img {
