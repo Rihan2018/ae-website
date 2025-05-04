@@ -84,30 +84,33 @@ body {
 .upcoming-events {
   background: #ffffff;
   border-radius: 15px;
-  padding: 30px;
+  padding: 0; /* Remove inner padding so header sits flush */
   margin: 50px auto;
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden; /* Ensures border radius applies to inner header */
 }
 
-.section-title {
-  background-color: #f0f0f0; /* Light gray background */
-  padding: 15px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.section-header {
+  background-color: #f7f7f7; /* Light gray background */
+  padding: 20px 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.section-header h2 {
+  margin: 0;
   font-size: 2em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   text-align: left;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: inline-block;
 }
 
 .scrolling-images {
   display: flex;
   overflow-x: auto;
   gap: 15px;
+  padding: 20px 30px;
   scroll-behavior: smooth;
 }
 
