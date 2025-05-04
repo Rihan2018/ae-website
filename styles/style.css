@@ -14,7 +14,7 @@ body {
   text-align: center;
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -89,25 +89,17 @@ footer {
 }
 
 .menu-items {
-  display: none;
   position: absolute;
-  top: 100%; /* show just below the icon */
+  top: 100%;
   right: 0;
+  z-index: 1000; /* ensures dropdown is on top */
   background-color: #111;
-  padding: 10px 0;
   border-radius: 4px;
-  z-index: 1000;
-  min-width: 160px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-width: 160px;
+  display: none;
 }
 
-.menu-items a {
-  display: block;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  white-space: nowrap;
-}
 
 .menu-items a:hover {
   background-color: #333;
