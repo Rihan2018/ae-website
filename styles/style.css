@@ -83,7 +83,7 @@ body {
 .hero-carousel {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -143,7 +143,6 @@ body {
 .carousel-dots span.active {
   background: white;
 }
-
 
 
 .upcoming-events {
