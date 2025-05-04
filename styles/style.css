@@ -38,13 +38,14 @@ body {
 }
 
 .hamburger-icon {
-  font-size: 28px;
+  font-size: 36px; /* Bigger icon size */
   cursor: pointer;
-  padding: 10px;
+  padding: 4px;    /* Smaller background box */
   background-color: #222;
   color: white;
   border-radius: 4px;
 }
+
 
 /* 📋 Dropdown menu */
 .menu-items {
