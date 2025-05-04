@@ -163,6 +163,35 @@ body {
   transform: translateY(-2px);
 }
 
+.past-events {
+  background: #ffffff;
+  border-radius: 15px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.scrolling-past {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.past-events .event-card {
+  flex-shrink: 0;
+  width: 180px;
+  text-align: center;
+}
+
+.past-events .event-card img {
+  max-height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 /* 📥 Footer */
 footer {
