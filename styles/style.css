@@ -76,35 +76,39 @@ footer {
 .hamburger-menu {
   position: relative;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: auto;
 }
 
 .hamburger-icon {
   font-size: 28px;
   cursor: pointer;
-  user-select: none;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+  border-radius: 4px;
 }
 
 .menu-items {
   display: none;
   position: absolute;
-  top: 40px;
-  left: 0;
+  top: 100%; /* show just below the icon */
+  right: 0;
   background-color: #111;
   padding: 10px 0;
   border-radius: 4px;
   z-index: 1000;
-  min-width: 150px;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .menu-items a {
   display: block;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 20px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .menu-items a:hover {
   background-color: #333;
 }
-
