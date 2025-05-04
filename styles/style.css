@@ -176,7 +176,7 @@ body {
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  overflow: visible;
+  overflow: hidden;
 }
 
 .scrolling-past {
@@ -205,8 +205,14 @@ body {
 }
 
 .past-events .event-card img:hover {
-  transform: scale(2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
+
 
 /* 📥 Footer */
 footer {
