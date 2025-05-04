@@ -89,7 +89,7 @@ body {
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  overflow: visible;
+  overflow: hidden; /* Ensures border radius applies to inner header */
 }
 
 .section-header {
@@ -176,7 +176,7 @@ body {
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .scrolling-past {
