@@ -80,6 +80,15 @@ body {
   max-width: 1000px;
 }
 
+.banner {
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .upcoming-events {
   background: #ffffff;
