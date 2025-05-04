@@ -109,24 +109,46 @@ body {
 .scrolling-images {
   display: flex;
   overflow-x: auto;
-  gap: 15px;
+  gap: 20px;
   padding: 20px 30px;
   scroll-behavior: smooth;
 }
 
-.scrolling-images img {
-  max-height: 160px;
+.event-card {
   flex-shrink: 0;
+  text-align: center;
+  width: 180px;
+}
+
+.event-card img {
+  max-height: 160px;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
-.scrolling-images img:hover {
+.event-card img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+.ticket-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #ffcc00, #ffaa00);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.ticket-btn:hover {
+  background: linear-gradient(to right, #ffdd33, #ff9900);
+  transform: translateY(-2px);
+}
 
 /* 📥 Footer */
 footer {
