@@ -136,7 +136,7 @@ body {
 }
 
 .event-card img:hover {
-  transform: scale(1.05);
+  transform: scale(2);
 }
 
 .event-info {
@@ -203,7 +203,7 @@ body {
 }
 
 .past-events .event-card img:hover {
-  transform: scale(1.05);
+  transform: scale(2);
 }
 
 /* 📥 Footer */
