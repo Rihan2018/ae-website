@@ -189,6 +189,17 @@ body {
   box-shadow: none;
 }
 
+.past-events .event-card img {
+  max-height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.past-events .event-card img:hover {
+  transform: scale(1.05);
+}
 
 /* 📥 Footer */
 footer {
