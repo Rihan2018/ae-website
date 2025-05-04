@@ -80,13 +80,20 @@ body {
   max-width: 1000px;
 }
 
-.banner {
-  display: block;
+.scrolling-banners {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.banner-img {
+  flex-shrink: 0;
   width: 90%;
   max-width: 1000px;
-  margin: 10px auto 10px auto;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -119,7 +126,7 @@ body {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding: 20px 30px;
+  padding: 30px 20px;
   scroll-behavior: smooth;
 }
 
