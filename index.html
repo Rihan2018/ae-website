@@ -23,11 +23,20 @@
   </div>
 </header>
 
-<div class="scrolling-banners">
-  <img src="/images/banner1.jpg" alt="Banner 1" class="banner-img" />
-  <img src="/images/banner2.jpg" alt="Banner 2" class="banner-img" />
-  <img src="/images/banner3.jpg" alt="Banner 3" class="banner-img" />
+<div class="hero-carousel">
+  <div class="carousel-track" id="hero-carousel-track">
+    <img src="/images/banner1.jpg" alt="Banner 1" class="carousel-image" />
+    <img src="/images/banner2.jpg" alt="Banner 2" class="carousel-image" />
+    <img src="/images/banner3.jpg" alt="Banner 3" class="carousel-image" />
+  </div>
+
+  <button class="carousel-arrow left" id="carousel-left">&#10094;</button>
+  <button class="carousel-arrow right" id="carousel-right">&#10095;</button>
+
+  <div class="carousel-dots" id="carousel-dots"></div>
 </div>
+
+
 
 <section class="upcoming-events">
   <div class="section-header">
@@ -86,6 +95,51 @@
       }
     });
   </script>
+<script>
+  const track = document.getElementById('hero-carousel-track');
+  const left = document.getElementById('carousel-left');
+  const right = document.getElementById('carousel-right');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const slides = document.querySelectorAll('.carousel-image');
+  let index = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.carousel-dots span');
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  right.addEventListener('click', () => {
+    if (index < slides.length - 1) index++;
+    else index = 0;
+    updateCarousel();
+  });
+
+  left.addEventListener('click', () => {
+    if (index > 0) index--;
+    else index = slides.length - 1;
+    updateCarousel();
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      index = parseInt(dot.dataset.index);
+      updateCarousel();
+    });
+  });
+
+  // Optional: Auto-slide
+  // setInterval(() => { right.click(); }, 5000);
+</script>
 
 </body>
 </html><!-- redeploy -->
