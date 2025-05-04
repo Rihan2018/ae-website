@@ -10,13 +10,15 @@ body {
 .hero-header {
   background: linear-gradient(135deg, #000000 0%, #1f1f1f 100%);
   color: #fff;
-  padding: 2rem 1rem; /* 🔽 Shrinks the header */
-  text-align: center;
+  padding: 2rem 1rem;
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   overflow: visible;
-}
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push logo left, menu right */
+}
 
 /* 📌 Logo */
 .logo-fixed {
