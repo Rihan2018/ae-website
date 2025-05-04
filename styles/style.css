@@ -82,11 +82,11 @@ body {
 
 .banner {
   display: block;
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
-  margin: 0;
-  border-radius: 0; /* Optional: remove rounding if you want it flush */
-  box-shadow: none; /* Optional: remove shadow if undesired */
+  margin: 10px auto 10px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 
