@@ -85,7 +85,7 @@ body {
   background: #ffffff;
   border-radius: 15px;
   padding: 0; /* Remove inner padding so header sits flush */
-  margin: 20px auto;
+  margin: 50px auto;
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -94,7 +94,7 @@ body {
 
 .section-header {
   background-color: #f7f7f7; /* Light gray background */
-  padding: 20px 30px;
+  padding: 10px 10px;
   border-bottom: 1px solid #ddd;
 }
 
