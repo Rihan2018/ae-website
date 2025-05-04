@@ -180,6 +180,15 @@ body {
   padding: 20px 30px;
 }
 
+.past-events .event-card {
+  flex-shrink: 0;
+  width: 180px;
+  text-align: center;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+}
+
 
 /* 📥 Footer */
 footer {
