@@ -306,7 +306,7 @@ body {
   overflow: visible;
 }
 
-.past-events .event-card img {
+.past-events .pastevent-card img {
   max-height: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -314,11 +314,10 @@ body {
   transition: transform 0.3s;
 }
 
-.past-events .event-card img:hover {
+.past-events .pastevent-card img:hover {
   transform: scale(1.1);
 }
 
-/* 📥 Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -326,7 +325,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* 📱 Mobile responsiveness */
+
 @media (max-width: 600px) {
   .hero-header {
     padding: 3rem 1rem 2rem;
