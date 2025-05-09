@@ -104,7 +104,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
+  background: none;
   color: white;
   border: none;
   font-size: 2rem;
@@ -293,18 +293,17 @@ body {
 
 
 .pastevent-card {
-  flex-shrink: 0;
-  background-color: #fafafa;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;  /* 🔁 stack image and content vertically */
   align-items: center;
-  gap: 15px;
-  overflow: visible;
+  width: fit-content;       /* 👈 match image width */
+  padding: 0;               /* remove padding */
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
+
 
 .past-events .pastevent-card img {
   max-height: 200px;
