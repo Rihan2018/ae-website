@@ -410,17 +410,23 @@ footer {
   }
 
   .event-card {
-    width: 100%;          /* use full width of the scroll container */
-    max-width: none;      /* allow full width usage */
-    height: auto;         /* let height grow naturally */
-    flex: 0 0 100%;       /* force full width in horizontal scroll */
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    /* height: 400px; ❌ Remove this */
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
+  
   .event-card img {
-    width: 100%;
-    height: auto;             /* Let height adjust naturally */
-    object-fit: contain;      /* Ensures whole image is visible */
+    width: 100%;           /* Fill full width of the card */
+    height: auto;          /* Maintain aspect ratio */
+    object-fit: cover;     /* Or use 'contain' if you want full visibility */
     display: block;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0; /* Rounded corners at top only */
   }
   .event-info {
     padding: 10px;
