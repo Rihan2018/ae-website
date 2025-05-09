@@ -12,7 +12,7 @@ html_content = template.render(
 )
 
 # Output the final index.html
-with open("index.html", "w") as f:
+with open("home.html", "w") as f:
     f.write(html_content)
 
 print("✅ index.html generated successfully.")
