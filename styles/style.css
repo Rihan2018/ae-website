@@ -417,6 +417,11 @@ footer {
   margin-top: 20px;
 }
 
+.gallery-item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .gallery-item img {
   width: 100%;
   height: auto;
