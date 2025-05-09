@@ -194,6 +194,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack image on top of text */
   width: 350px;
+  height: 400px; /* Fixed height */
   background-color: #fafafa;
   border-radius: 12px;
   padding: 0;
@@ -222,6 +223,7 @@ body {
   flex-direction: column;
   flex-grow: 1;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .event-info p {
