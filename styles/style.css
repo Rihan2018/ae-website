@@ -416,11 +416,11 @@ footer {
     flex: 0 0 100%;       /* force full width in horizontal scroll */
   }
   .event-card img {
-    width: 100%;           /* Fill full width of the card */
-    height: auto;          /* Maintain aspect ratio */
-    object-fit: cover;     /* Or use 'contain' if you want full visibility */
+    width: 100%;
+    height: auto;             /* Let height adjust naturally */
+    object-fit: contain;      /* Ensures whole image is visible */
     display: block;
-    border-radius: 12px 12px 0 0; /* Rounded corners at top only */
+    border-radius: 12px 12px 0 0;
   }
   .event-info {
     padding: 10px;
