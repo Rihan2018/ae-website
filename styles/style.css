@@ -353,7 +353,7 @@ footer {
 
 .contact-btn {
   display: inline-block;
-  background: linear-gradient(to right, #ffcc00, #ffaa00);
+  background: linear-gradient(to right, #3399ff, #3366cc);
   color: #000;
   padding: 8px 16px;
   border-radius: 20px;
@@ -367,8 +367,7 @@ footer {
 }
 
 .contact-btn:hover {
-  background: linear-gradient(to right, #ffdd33, #ff9900);
-  transform: translateY(-2px);
+  background: linear-gradient(to right, #66b3ff, #3355aa);
 }
 
 
