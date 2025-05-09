@@ -337,9 +337,10 @@ footer {
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: none;       /* Remove background box */
+  box-shadow: none;       /* Remove shadow */
+  padding: 0;             /* Optional: reduce internal spacing */
+  border-radius: 0; 
   font-family: 'Segoe UI', sans-serif;
 }
 
