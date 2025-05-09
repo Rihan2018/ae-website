@@ -410,22 +410,6 @@ footer {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.section-header {
-  background-color: #f7f7f7;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;             /* ensures no extra spacing outside */
-  display: block;        /* guarantees block-level behavior */
-}
-
-.section-header h2 {
-  margin: 0;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
 
 .gallery-grid {
   display: grid;
