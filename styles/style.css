@@ -407,12 +407,17 @@ footer {
   .scrolling-images {
     padding: 20px 10px;
     gap: 16px;
+    scroll-padding: 10px;
   }
 
+  
+
   .event-card {
-    width: 85vw;             /* Responsive width */
-    height: auto;            /* Allow height to grow naturally */
+    width: 95vw;           /* Makes it almost full width */
+    max-width: 500px;      /* Prevents it from being too wide on tablets */
+    margin: 0 auto;        /* Centers the card in view */
   }
+  
 
   .event-card img {
     max-height: 180px;
@@ -423,6 +428,7 @@ footer {
     padding: 10px;
     font-size: 0.75em;
   }
+
 
   .event-text {
     max-height: 150px;       /* Optional: to prevent overflow */
