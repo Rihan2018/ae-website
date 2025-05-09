@@ -417,11 +417,6 @@ footer {
   margin-top: 20px;
 }
 
-.gallery-item {
-  padding: 10px;
-  box-sizing: border-box;
-}
-
 .gallery-item img {
   width: 100%;
   height: auto;
@@ -429,6 +424,15 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
+
+.image-caption {
+  margin-top: 8px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
 
 .gallery-item img:hover {
   transform: scale(1.05);

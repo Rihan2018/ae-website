@@ -26,10 +26,12 @@
       <h2>Photo Gallery</h2>
     </div>
     <div class="gallery-grid">
-      {% for image in gallery_images %}
-        <div class="gallery-item">
-          <img src="{{ image.url }}" alt="{{ image.alt }}" />
-        </div>
+        {% for image in gallery_images %}
+          <div class="gallery-item">
+    <img src="{{ image.url }}" alt="{{ image.alt }}">
+    <p class="image-caption">{{ image.alt }}</p>
+  </div>
+
       {% endfor %}
     </div>
   </section>
