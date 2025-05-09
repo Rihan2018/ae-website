@@ -31,7 +31,7 @@ run_command([sys.executable, "build.py"], check=True)
 
 # Step 2: Force rebuild trigger
 print("🛠 Forcing rebuild by appending comment to index.html")
-with open("index.html", "a") as f:
+with open("home.html", "a") as f:
     f.write("<!-- redeploy -->\n")
 
 # Step 3: Initialize Git if needed

@@ -15,4 +15,4 @@ html_content = template.render(
 with open("home.html", "w") as f:
     f.write(html_content)
 
-print("✅ index.html generated successfully.")
+print("✅ home.html generated successfully.")
