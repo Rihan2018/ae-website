@@ -463,7 +463,7 @@ footer {
     }
   
     .pastevent-card {
-      width: 100%;              /* Full width on small screens */
+      width: 50%;              /* Full width on small screens */
       max-width: none;
       align-items: stretch;
     }
