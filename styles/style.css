@@ -432,7 +432,7 @@ footer {
 
 @media (max-width: 600px) {
   .scrolling-images {
-    flex-direction: column;
+    display: flex;
     padding: 10px;        /* reduce padding */
     gap: 10px;            /* less spacing between cards */
   }
