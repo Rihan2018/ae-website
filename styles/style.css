@@ -210,13 +210,12 @@ body {
   display: block;
 }
 
-
-
 .event-card img:hover {
   transform: scale(1.1);
 }
 
 .event-info {
+  font-size: 0.8em;
   width: 100%; /* match image width */
   padding: 15px;
   display: flex;
@@ -224,8 +223,6 @@ body {
   flex-grow: 1;
   box-sizing: border-box;
 }
-
-
 
 .event-info p {
   margin: 4px 0;
