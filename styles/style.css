@@ -204,7 +204,6 @@ body {
 
 .event-card img {
   width: 100%;
-  max-height: 250px;
   border-radius: 0; /* Remove radius if you want flush edges */
   object-fit: cover;
 }
