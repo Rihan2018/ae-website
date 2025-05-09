@@ -203,22 +203,30 @@ body {
 }
 
 
-/* Base state */
 .event-card img {
+  width: 100%;
+  max-height: 250px;
+  height: auto;
+  object-fit: contain; /* 🔁 show full image without cropping */
+  display: block;
   transition: transform 0.3s ease;
   cursor: zoom-in;
   z-index: 1;
 }
 
-/* Zoomed-in state */
 .event-card img.zoomed {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.8);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 9999;
   cursor: zoom-out;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  background: white;
+  padding: 5px;
+  max-width: 90vw;     /* Don't exceed 90% of screen width */
+  max-height: 90vh;    /* Don't exceed 90% of screen height */
+  border-radius: 10px;
 }
 
 
