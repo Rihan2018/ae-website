@@ -404,11 +404,40 @@ footer {
 
 
 @media (max-width: 600px) {
-  .hero-header {
-    padding: 3rem 1rem 2rem;
+  .scrolling-images {
+    padding: 20px 10px;
+    gap: 16px;
   }
 
-  .logo-fixed {
-    width: 60px;
+  .event-card {
+    width: 85vw;             /* Responsive width */
+    height: auto;            /* Allow height to grow naturally */
+  }
+
+  .event-card img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  .event-info {
+    padding: 10px;
+    font-size: 0.75em;
+  }
+
+  .event-text {
+    max-height: 150px;       /* Optional: to prevent overflow */
+    overflow-y: auto;
+  }
+
+  .ticket-unavailable,
+  .ticket-btn {
+    font-size: 0.75em;
+    padding: 5px 10px;
+    margin-top: 8px;
+  }
+
+  .section-header h2 {
+    font-size: 1rem;
   }
 }
+
