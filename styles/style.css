@@ -410,17 +410,11 @@ footer {
   }
 
   .event-card {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    /* height: 400px; ❌ Remove this */
-    background-color: #fafafa;
-    border-radius: 12px;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 100%;          /* use full width of the scroll container */
+    max-width: none;      /* allow full width usage */
+    height: auto;         /* let height grow naturally */
+    flex: 0 0 100%;       /* force full width in horizontal scroll */
   }
-
   .event-card img {
     width: 100%;           /* Fill full width of the card */
     height: auto;          /* Maintain aspect ratio */
@@ -431,6 +425,7 @@ footer {
   .event-info {
     padding: 10px;
   }
+
 
     .scrolling-past {
       flex-direction: column;
