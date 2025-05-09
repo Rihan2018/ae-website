@@ -3,7 +3,7 @@ import os
 
 # Setup Jinja2 environment to load from the templates directory
 env = Environment(loader=FileSystemLoader('templates'))
-template = env.get_template('index.html.j2')
+template = env.get_template('home.html.j2')
 
 # Render the template with dynamic content
 html_content = template.render(

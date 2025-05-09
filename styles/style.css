@@ -305,15 +305,16 @@ body {
 }
 
 
-.past-events .pastevent-card img {
-  max-height: 200px;
+.pastevent-card img {
+  height: 200px;           /* Fixed size */
+  width: auto;             /* Keep aspect ratio */
+  display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
   transition: transform 0.3s;
 }
 
-.past-events .pastevent-card img:hover {
+.pastevent-card img:hover {
   transform: scale(1.1);
 }
 
