@@ -230,6 +230,12 @@ body {
   margin: 4px 0;
 }
 
+.event-text {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
 .ticket-btn {
   display: inline-block;
   background: linear-gradient(to right, #ffcc00, #ffaa00);
