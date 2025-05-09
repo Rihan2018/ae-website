@@ -420,7 +420,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
-  
+
   .event-card img {
     width: 100%;           /* Fill full width of the card */
     height: auto;          /* Maintain aspect ratio */
@@ -431,11 +431,6 @@ footer {
   .event-info {
     padding: 10px;
   }
-
-  .event-card img {
-    max-height: 180px;
-  }
-
 
     .scrolling-past {
       flex-direction: column;
