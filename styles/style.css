@@ -432,7 +432,7 @@ footer {
 
 @media (max-width: 600px) {
   .scrolling-images {
-    display: flex;
+    flex-direction: column;
     padding: 10px;        /* reduce padding */
     gap: 10px;            /* less spacing between cards */
   }
@@ -457,20 +457,24 @@ footer {
 
 
     .scrolling-past {
-      display: flex;
+      flex-direction: column;
       padding: 10px;
       gap: 16px;
     }
   
     .pastevent-card {
-      width: 50%;              /* Full width on small screens */
+      width: 100%;              /* Full width on small screens */
       max-width: none;
       align-items: stretch;
     }
   
     .pastevent-card img {
-      width: 50%;
+      width: 100%;
       height: auto;             /* Let height scale naturally */
       border-radius: 8px;
+    }
+
+    .pastevent-card img.zoomed {
+      transform: translate(-50%, -50%) scale(1.2);
     }
 }
