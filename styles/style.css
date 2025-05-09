@@ -194,6 +194,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack image on top of text */
   width: 350px;
+  height: 400px; /* Fixed height */
   background-color: #fafafa;
   border-radius: 12px;
   padding: 0;
@@ -408,21 +409,23 @@ footer {
     gap: 10px;            /* less spacing between cards */
   }
 
-  .event-card {
-    width: 100%;          /* use full width of the scroll container */
-    max-width: none;      /* allow full width usage */
-    height: auto !important;        /* let height grow naturally */
-    flex: 0 0 100%;       /* force full width in horizontal scroll */
-  }
-  .event-card img {
-    width: 100%;           /* Fill full width of the card */
-    height: auto;          /* Maintain aspect ratio */
-    object-fit: cover;     /* Or use 'contain' if you want full visibility */
-    display: block;
-    border-radius: 12px 12px 0 0; /* Rounded corners at top only */
-  }
-  .event-info {
-    padding: 10px;
+    .event-card {
+      width: 100%;
+      height: auto;
+      flex: 0 0 auto;
+    }
+  
+    .event-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;  /* Show entire image */
+      display: block;
+      border-radius: 12px 12px 0 0;
+    }
+  
+    .event-info {
+      padding: 10px;
+    }
   }
 
 
