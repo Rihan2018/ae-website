@@ -217,8 +217,8 @@ body {
 }
 
 .event-info {
-  display: flex;
-  flex-direction: column;
+  font-size: 0.9em;
+  color: #333;
   flex-grow: 1;
 }
 
@@ -237,9 +237,10 @@ body {
   font-size: 0.85em;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, transform 0.2s;
-  align-self: flex-start;
-  margin-top: auto; /* Push to bottom of .event-info */
+  display: block;            /* Make sure it takes its own line */
+  margin-top: 10px;          /* Push it below the text */
 }
+
 
 .ticket-btn:hover {
   background: linear-gradient(to right, #ffdd33, #ff9900);
