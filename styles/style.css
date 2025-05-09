@@ -405,45 +405,22 @@ footer {
 
 @media (max-width: 600px) {
   .scrolling-images {
-    padding: 20px 10px;
-    gap: 16px;
-    scroll-padding: 10px;
+    padding: 10px;        /* reduce padding */
+    gap: 10px;            /* less spacing between cards */
   }
-
-  
 
   .event-card {
-    width: 95vw;           /* Makes it almost full width */
-    max-width: 500px;      /* Prevents it from being too wide on tablets */
-    margin: 0 auto;        /* Centers the card in view */
-  }
-  
-
-  .event-card img {
-    max-height: 180px;
-    object-fit: contain;
+    width: 100%;          /* use full width of the scroll container */
+    max-width: none;      /* allow full width usage */
+    height: auto;         /* let height grow naturally */
+    flex: 0 0 100%;       /* force full width in horizontal scroll */
   }
 
   .event-info {
     padding: 10px;
-    font-size: 0.75em;
   }
 
-
-  .event-text {
-    max-height: 150px;       /* Optional: to prevent overflow */
-    overflow-y: auto;
-  }
-
-  .ticket-unavailable,
-  .ticket-btn {
-    font-size: 0.75em;
-    padding: 5px 10px;
-    margin-top: 8px;
-  }
-
-  .section-header h2 {
-    font-size: 1rem;
+  .event-card img {
+    max-height: 180px;
   }
 }
-
