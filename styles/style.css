@@ -402,6 +402,13 @@ footer {
   transform: scale(1.05);
 }
 
+.event-card img.zoomed {
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+  cursor: zoom-out;
+}
+
 
 @media (max-width: 600px) {
   .scrolling-images {
@@ -427,7 +434,6 @@ footer {
     .event-info {
       padding: 10px;
     }
-  }
 
 
     .scrolling-past {
