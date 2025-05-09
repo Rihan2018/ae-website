@@ -324,6 +324,14 @@ footer {
   background: #eee;
   font-size: 0.9rem;
 }
+
+.about-content {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #444;
+  margin: 20px; /* 👈 Adds space around the text inside the box */
+}
+
 .gallery-section {
   width: 90%;
   max-width: 1000px;
