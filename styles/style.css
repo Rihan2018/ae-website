@@ -412,7 +412,7 @@ footer {
   .event-card {
     width: 100%;          /* use full width of the scroll container */
     max-width: none;      /* allow full width usage */
-    height: auto;         /* let height grow naturally */
+    height: auto !important;        /* let height grow naturally */
     flex: 0 0 100%;       /* force full width in horizontal scroll */
   }
   .event-card img {
