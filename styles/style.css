@@ -457,7 +457,7 @@ footer {
 
 
     .scrolling-past {
-      flex-direction: column;
+      display: flex;
       padding: 10px;
       gap: 16px;
     }
