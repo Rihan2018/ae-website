@@ -194,7 +194,6 @@ body {
   display: flex;
   flex-direction: column; /* Stack image on top of text */
   width: 350px;
-  height: 400px; /* Fixed height */
   background-color: #fafafa;
   border-radius: 12px;
   padding: 0;
