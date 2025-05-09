@@ -469,7 +469,7 @@ footer {
     }
   
     .pastevent-card img {
-      width: 100%;
+      width: 50%;
       height: auto;             /* Let height scale naturally */
       border-radius: 8px;
     }
