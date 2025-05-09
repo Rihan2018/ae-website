@@ -25,15 +25,21 @@
     <div class="section-header">
       <h2>Photo Gallery</h2>
     </div>
-    <div class="gallery-grid">
-        {% for image in gallery_images %}
-          <div class="gallery-item">
-    <img src="{{ image.url }}" alt="{{ image.alt }}">
-    <p class="image-caption">{{ image.alt }}</p>
-  </div>
 
-      {% endfor %}
-    </div>
+    {% for category, filenames in gallery_categories.items() %}
+      <div class="gallery-category">
+        <h3 class="category-title">{{ category }}</h3>
+        <div class="gallery-grid">
+          {% for filename in filenames %}
+            <div class="gallery-item">
+              <img src="images/Gallery/{{ category }}/{{ filename }}" alt="{{ category }} {{ loop.index }}">
+              <p class="image-caption">{{ category }} {{ loop.index }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
   </section>
 </main>
 
