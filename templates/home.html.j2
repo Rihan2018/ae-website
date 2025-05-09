@@ -185,5 +185,25 @@
   // setInterval(() => { right.click(); }, 5000);
 </script>
 
+<script>
+  document.querySelectorAll('.event-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      const alreadyZoomed = img.classList.contains('zoomed');
+      document.querySelectorAll('.event-card img.zoomed').forEach(i => i.classList.remove('zoomed'));
+      if (!alreadyZoomed) {
+        img.classList.add('zoomed');
+      }
+    });
+
+    // Optional: exit zoom on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        img.classList.remove('zoomed');
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
