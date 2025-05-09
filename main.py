@@ -29,10 +29,13 @@ if not os.path.exists(".gitignore"):
 print("🔨 Running build.py...")
 run_command([sys.executable, "build.py"], check=True)
 
-# Step 2: Force rebuild trigger
-print("🛠 Forcing rebuild by appending comment to index.html")
-with open("home.html", "a") as f:
-    f.write("<!-- redeploy -->\n")
+# Step 2: Force rebuild trigger for all generated HTML files
+print("🛠 Forcing rebuild by appending comment to HTML pages")
+pages_to_touch = ["home.html", "about.html", "gallery.html"]
+for page in pages_to_touch:
+    if os.path.exists(page):
+        with open(page, "a") as f:
+            f.write("<!-- redeploy -->\n")
 
 # Step 3: Initialize Git if needed
 if not os.path.exists(".git"):
@@ -54,7 +57,7 @@ print("📝 Checking for changes to commit...")
 status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
 
 if status.stdout.strip():
-    run_command(["git", "commit", "-m", "🚀 Deploy update with logo and styles"])
+    run_command(["git", "commit", "-m", "🚀 Deploy update with new pages"])
 else:
     print("📭 No changes to commit. Skipping commit step.")
 
@@ -66,4 +69,3 @@ run_command(["git", "branch", "-M", "main"], check=False)
 run_command(["git", "pull", "origin", "main", "--rebase"], desc="🔄 Pulling latest changes from remote...")
 
 run_command(["git", "push", "-u", "origin", "main"])
-

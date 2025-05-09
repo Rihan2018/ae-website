@@ -28,3 +28,17 @@ about_html = about_template.render(
 with open("about.html", "w") as f:
     f.write(about_html)
 print("✅ about.html generated successfully.")
+
+# Render gallery page
+gallery_template = env.get_template('gallery.html.j2')
+gallery_html = gallery_template.render(
+    company="Astronaut Entertainment",
+    gallery_images=[
+        {"url": "/images/gallery/1.jpg", "alt": "Concert crowd"},
+        {"url": "/images/gallery/2.jpg", "alt": "Performer on stage"},
+        {"url": "/images/gallery/3.jpg", "alt": "Event lighting"},
+    ]
+)
+with open("gallery.html", "w") as f:
+    f.write(gallery_html)
+print("✅ gallery.html generated successfully.")

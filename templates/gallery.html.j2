@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Astronaut Entertainment</title>
+  <title>Gallery | {{ company }}</title>
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
 <header class="hero-header">
-  <img src="/images/logo.png" alt="Astronaut Entertainment logo" class="logo-fixed" />
+  <img src="/images/logo.png" alt="{{ company }} logo" class="logo-fixed" />
   <div class="hamburger-menu">
     <div class="hamburger-icon" id="hamburger-icon">&#9776;</div>
     <div class="menu-items" id="menu-items">
@@ -22,24 +22,22 @@
 </header>
 
 <main>
-  <section class="about-section">
+  <section class="gallery-section">
     <div class="section-header">
-      <h2>About Astronaut Entertainment</h2>
+      <h2>Photo Gallery</h2>
     </div>
-    <div class="about-content">
-      
-        <p>Astronaut Entertainment is a forward-thinking concert promoter operating across North America and beyond.</p>
-      
-        <p>Founded in 2023, our mission is to bring high-energy shows to fans everywhere.</p>
-      
-        <p>We’re more than promoters — we’re storytellers of sound.</p>
-      
+    <div class="gallery-grid">
+      {% for image in gallery_images %}
+        <div class="gallery-item">
+          <img src="{{ image.url }}" alt="{{ image.alt }}" />
+        </div>
+      {% endfor %}
     </div>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2023 Astronaut Entertainment. All rights reserved.</p>
+  <p>&copy; 2023 {{ company }}. All rights reserved.</p>
 </footer>
 
 <script>
@@ -56,4 +54,4 @@
 </script>
 
 </body>
-</html><!-- redeploy -->
+</html>
