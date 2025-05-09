@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Astronaut Entertainment</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+<header class="hero-header">
+  <img src="/images/logo.png" alt="Astronaut Entertainment logo" class="logo-fixed" />
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" id="hamburger-icon">&#9776;</div>
+    <div class="menu-items" id="menu-items">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="about-section">
+    <div class="section-header">
+      <h2>About Astronaut Entertainment</h2>
+    </div>
+    <div class="about-content">
+      
+        <p>Astronaut Entertainment is a forward-thinking concert promoter operating across North America and beyond.</p>
+      
+        <p>Founded in 2023, our mission is to bring high-energy shows to fans everywhere.</p>
+      
+        <p>We’re more than promoters — we’re storytellers of sound.</p>
+      
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2023 Astronaut Entertainment. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const menuItems = document.getElementById('menu-items');
+  hamburgerIcon.addEventListener('click', () => {
+    menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
+  });
+  window.addEventListener('click', (e) => {
+    if (!e.target.closest('.hamburger-menu')) {
+      menuItems.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
