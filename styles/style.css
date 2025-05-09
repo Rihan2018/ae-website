@@ -321,7 +321,7 @@ body {
 
 
 .pastevent-card img {
-  height: 200px;           /* Fixed size */
+  height: 300px;           /* Fixed size */
   width: auto;             /* Keep aspect ratio */
   display: block;
   border-radius: 10px;

@@ -201,33 +201,22 @@
     });
   });
 
-  function closeAllZoomed() {
-    document.querySelectorAll('img.zoomed').forEach(img => img.classList.remove('zoomed'));
-  }
-
-  document.querySelectorAll('.event-card img, .pastevent-card img').forEach(img => {
+    document.querySelectorAll('.pastevent-card img').forEach(img => {
     img.addEventListener('click', () => {
       const alreadyZoomed = img.classList.contains('zoomed');
-      closeAllZoomed();
+      document.querySelectorAll('.pastevent-card img.zoomed').forEach(i => i.classList.remove('zoomed'));
       if (!alreadyZoomed) {
         img.classList.add('zoomed');
       }
     });
-  });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeAllZoomed();
-    }
+    // Optional: exit zoom on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        img.classList.remove('zoomed');
+      }
+    });
   });
-
-  // Optional: click anywhere to close
-  document.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'IMG' || !e.target.classList.contains('zoomed')) {
-      closeAllZoomed();
-    }
-  });
-
 </script>
 
 
