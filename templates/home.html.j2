@@ -201,22 +201,33 @@
     });
   });
 
-    document.querySelectorAll('.pastevent-card img').forEach(img => {
+  function closeAllZoomed() {
+    document.querySelectorAll('img.zoomed').forEach(img => img.classList.remove('zoomed'));
+  }
+
+  document.querySelectorAll('.event-card img, .pastevent-card img').forEach(img => {
     img.addEventListener('click', () => {
       const alreadyZoomed = img.classList.contains('zoomed');
-      document.querySelectorAll('.pastevent-card img.zoomed').forEach(i => i.classList.remove('zoomed'));
+      closeAllZoomed();
       if (!alreadyZoomed) {
         img.classList.add('zoomed');
       }
     });
-
-    // Optional: exit zoom on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        img.classList.remove('zoomed');
-      }
-    });
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllZoomed();
+    }
+  });
+
+  // Optional: click anywhere to close
+  document.addEventListener('click', (e) => {
+    if (e.target.tagName !== 'IMG' || !e.target.classList.contains('zoomed')) {
+      closeAllZoomed();
+    }
+  });
+
 </script>
 
 
