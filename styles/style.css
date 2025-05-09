@@ -217,12 +217,14 @@ body {
 }
 
 .event-info {
+  width: 100%; /* match image width */
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  padding: 15px;
   flex-grow: 1;
-  width: 100%; /* Ensure it matches image width */
+  box-sizing: border-box;
 }
+
 
 
 .event-info p {
