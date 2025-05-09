@@ -416,6 +416,14 @@ footer {
   border-bottom: 1px solid #ddd;
   width: 100%;
   box-sizing: border-box;
+  margin: 0;             /* ensures no extra spacing outside */
+  display: block;        /* guarantees block-level behavior */
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 
