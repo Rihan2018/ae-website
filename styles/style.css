@@ -415,7 +415,13 @@ footer {
     height: auto;         /* let height grow naturally */
     flex: 0 0 100%;       /* force full width in horizontal scroll */
   }
-
+  .event-card img {
+    width: 100%;           /* Fill full width of the card */
+    height: auto;          /* Maintain aspect ratio */
+    object-fit: cover;     /* Or use 'contain' if you want full visibility */
+    display: block;
+    border-radius: 12px 12px 0 0; /* Rounded corners at top only */
+  }
   .event-info {
     padding: 10px;
   }
@@ -423,4 +429,23 @@ footer {
   .event-card img {
     max-height: 180px;
   }
+
+
+    .scrolling-past {
+      flex-direction: column;
+      padding: 10px;
+      gap: 16px;
+    }
+  
+    .pastevent-card {
+      width: 100%;              /* Full width on small screens */
+      max-width: none;
+      align-items: stretch;
+    }
+  
+    .pastevent-card img {
+      width: 100%;
+      height: auto;             /* Let height scale naturally */
+      border-radius: 8px;
+    }
 }
