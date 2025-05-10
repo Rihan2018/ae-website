@@ -8,7 +8,7 @@ from werkzeug.routing import Map, Rule
 # --------------------------------
 # 1. Flask App Setup
 # --------------------------------
-app = Flask(__name__, static_folder=".", static_url_path="")
+app = Flask(__name__)  # DO NOT serve static_folder="." to avoid bypass
 
 IMAGE_FOLDER = os.path.abspath("images")
 
@@ -24,6 +24,19 @@ def about():
 def gallery():
     return app.send_static_file("gallery.html")
 
+@app.route("/img/<path:filename>")
+def protected_image(filename):
+    full_path = os.path.join(IMAGE_FOLDER, filename)
+    print("Serving:", full_path)  # Optional debug
+
+    # Prevent directory traversal
+    if not os.path.abspath(full_path).startswith(IMAGE_FOLDER):
+        return abort(403)
+
+    if os.path.exists(full_path):
+        return send_file(full_path)
+    return abort(404)
+
 # --------------------------------
 # 2. Jinja2 Static Site Generation
 # --------------------------------
@@ -31,7 +44,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 
 # Simulated url_for for use in static templates
 url_map = Map([
-    Rule('/images/<path:filename>', endpoint='protected_image')
+    Rule('/img/<path:filename>', endpoint='protected_image')  # FIXED route
 ])
 url_adapter = url_map.bind('localhost')
 
