@@ -31,7 +31,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 
 # Simulated url_for for use in static templates
 url_map = Map([
-    Rule('/img/<path:filename>', endpoint='protected_image')
+    Rule('/images/<path:filename>', endpoint='protected_image')
 ])
 url_adapter = url_map.bind('localhost')
 
