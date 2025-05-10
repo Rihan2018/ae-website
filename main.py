@@ -8,7 +8,7 @@ from werkzeug.routing import Map, Rule
 # --------------------------------
 # 1. Flask App Setup
 # --------------------------------
-app = Flask(__name__)  # DO NOT serve static_folder="." to avoid bypass
+app = Flask(__name__, static_folder=".", static_url_path="")
 
 IMAGE_FOLDER = os.path.abspath("images")
 
