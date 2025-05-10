@@ -18,13 +18,19 @@ url_adapter = url_map.bind('localhost')
 def build_url(endpoint, **values):
     return url_adapter.build(endpoint, values)
 
-# Make this function available in Jinja templates
+# Inject url_for into templates
 env.globals['url_for'] = build_url
 
 # --------------------------
-# Shared context
+# Shared site context
 # --------------------------
 company_name = "Astronaut Entertainment"
+
+# --------------------------
+# Output directory (optional)
+# --------------------------
+output_dir = "."
+os.makedirs(output_dir, exist_ok=True)
 
 # --------------------------
 # Render home page
@@ -34,7 +40,7 @@ home_html = home_template.render(
     company=company_name,
     description="NORTH AMERICA CONCERT PROMOTER"
 )
-with open("index.html", "w") as f:
+with open(os.path.join(output_dir, "index.html"), "w", encoding='utf-8') as f:
     f.write(home_html)
 print("✅ index.html generated successfully.")
 
@@ -51,7 +57,7 @@ about_html = about_template.render(
         "We’re more than promoters — we’re storytellers of sound."
     ]
 )
-with open("about.html", "w") as f:
+with open(os.path.join(output_dir, "about.html"), "w", encoding='utf-8') as f:
     f.write(about_html)
 print("✅ about.html generated successfully.")
 
@@ -81,6 +87,6 @@ gallery_html = gallery_template.render(
     company=company_name,
     gallery_categories=gallery_categories
 )
-with open("gallery.html", "w") as f:
+with open(os.path.join(output_dir, "gallery.html"), "w", encoding='utf-8') as f:
     f.write(gallery_html)
 print("✅ gallery.html generated successfully.")
