@@ -23,17 +23,15 @@
 
 <div class="hero-carousel">
   <div class="carousel-track" id="hero-carousel-track">
-    <img src="/images/banner1.jpg" alt="Banner 1" class="carousel-image" />
-    <img src="/images/banner2.jpg" alt="Banner 2" class="carousel-image" />
-    <img src="/images/banner3.jpg" alt="Banner 3" class="carousel-image" />
+    <img src="{{ url_for('protected_image', filename='banner1.jpg') }}" alt="Banner 1" class="carousel-image" />
+    <img src="{{ url_for('protected_image', filename='banner2.jpg') }}" alt="Banner 2" class="carousel-image" />
+    <img src="{{ url_for('protected_image', filename='banner3.jpg') }}" alt="Banner 3" class="carousel-image" />
   </div>
   <div class="banner-text">ASTRONAUT ENTERTAINMENT<br>North America Concert Promoter</div> 
   <button class="carousel-arrow left" id="carousel-left">&#10094;</button>
   <button class="carousel-arrow right" id="carousel-right">&#10095;</button>
-
   <div class="carousel-dots" id="carousel-dots"></div>
 </div>
-
 
 <section class="upcoming-events">
   <div class="section-header">
@@ -42,47 +40,42 @@
 
   <div class="scrolling-images">
     <div class="event-card">
-      <img src="/images/Upcoming Events/1.png" alt="Upcoming 1" />
+      <img src="{{ url_for('protected_image', filename='Upcoming Events/1.png') }}" alt="Upcoming 1" />
       <div class="event-info">
-      <div class="event-text">
-        <p><strong>Location:</strong> Kuala Lumpur</p>
-        <p><strong>Date:</strong> June 10, 2025</p>
-        <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
-      </div>
-         <span class="ticket-unavailable">🎫 Ticket available soon</span>
-        <!--<a href="https://example.com/tickets3" target="_blank" class="ticket-btn">🎟️ Buy Tickets</a>-->
-      </div>
-    </div>
-
-    <div class="event-card">
-      <img src="/images/Upcoming Events/2.png" alt="Upcoming 2" />
-      <div class="event-info">
-       <div class="event-text">
-        <p><strong>Location:</strong> Singapore</p>
-        <p><strong>Date:</strong> June 14, 2025</p>
-        <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
-       </div>
-         <span class="ticket-unavailable">🎫 Ticket available soon</span>
-        <!--<a href="https://example.com/tickets3" target="_blank" class="ticket-btn">🎟️ Buy Tickets</a>-->
-      </div>
-    </div>
-
-    <div class="event-card">
-      <img src="/images/Upcoming Events/3.png" alt="Upcoming 3" />
-      <div class="event-info">
-      <div class="event-text">
-        <p><strong>Location:</strong> Tokyo</p>
-        <p><strong>Date:</strong> June 20, 2025</p>
-        <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
-      </div>
+        <div class="event-text">
+          <p><strong>Location:</strong> Kuala Lumpur</p>
+          <p><strong>Date:</strong> June 10, 2025</p>
+          <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
+        </div>
         <span class="ticket-unavailable">🎫 Ticket available soon</span>
-        <!--<a href="https://example.com/tickets3" target="_blank" class="ticket-btn">🎟️ Buy Tickets</a>-->
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="{{ url_for('protected_image', filename='Upcoming Events/2.png') }}" alt="Upcoming 2" />
+      <div class="event-info">
+        <div class="event-text">
+          <p><strong>Location:</strong> Singapore</p>
+          <p><strong>Date:</strong> June 14, 2025</p>
+          <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
+        </div>
+        <span class="ticket-unavailable">🎫 Ticket available soon</span>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="{{ url_for('protected_image', filename='Upcoming Events/3.png') }}" alt="Upcoming 3" />
+      <div class="event-info">
+        <div class="event-text">
+          <p><strong>Location:</strong> Tokyo</p>
+          <p><strong>Date:</strong> June 20, 2025</p>
+          <p><strong>Details:</strong> A Dog Love to Love" is Singapore’s wildest new dating-comedy show! Led by viral cupid Ergou, expect improv chaos, meme-worthy skits, and surprise twists in the Love Mailbox.</p>
+        </div>
+        <span class="ticket-unavailable">🎫 Ticket available soon</span>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <section class="past-events">
   <div class="section-header">
@@ -91,43 +84,42 @@
 
   <div class="scrolling-past">
     <div class="pastevent-card">
-      <img src="/images/Past Events/Past1.png" alt="Past Event 1" />
+      <img src="{{ url_for('protected_image', filename='Past Events/Past1.png') }}" alt="Past Event 1" />
     </div>
 
     <div class="pastevent-card">
-      <img src="/images/Past Events/Past2.png" alt="Past Event 2" />
+      <img src="{{ url_for('protected_image', filename='Past Events/Past2.png') }}" alt="Past Event 2" />
     </div>
 
     <div class="pastevent-card">
-      <img src="/images/Past Events/Past3.png" alt="Past Event 3" />
+      <img src="{{ url_for('protected_image', filename='Past Events/Past3.png') }}" alt="Past Event 3" />
     </div>
 
-     <div class="pastevent-card">
-      <img src="/images/Past Events/Past4.png" alt="Past Event 4" />
+    <div class="pastevent-card">
+      <img src="{{ url_for('protected_image', filename='Past Events/Past4.png') }}" alt="Past Event 4" />
     </div>   
-
   </div>
 </section>
 
+<footer>
+  <p>&copy; 2023 Astronaut Entertainment. All rights reserved.</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2023 Astronaut Entertainment. All rights reserved.</p>
-  </footer>
+<!-- Existing JS (unchanged) -->
+<script>
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const menuItems = document.getElementById('menu-items');
 
-  <script>
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const menuItems = document.getElementById('menu-items');
+  hamburgerIcon.addEventListener('click', () => {
+    menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
+  });
 
-    hamburgerIcon.addEventListener('click', () => {
-      menuItems.style.display = menuItems.style.display === 'block' ? 'none' : 'block';
-    });
-
-    window.addEventListener('click', (e) => {
-      if (!e.target.closest('.hamburger-menu')) {
-        menuItems.style.display = 'none';
-      }
-    });
-  </script>
+  window.addEventListener('click', (e) => {
+    if (!e.target.closest('.hamburger-menu')) {
+      menuItems.style.display = 'none';
+    }
+  });
+</script>
 <script>
   const track = document.getElementById('hero-carousel-track');
   const left = document.getElementById('carousel-left');
@@ -152,14 +144,12 @@
   }
 
   right.addEventListener('click', () => {
-    if (index < slides.length - 1) index++;
-    else index = 0;
+    index = (index + 1) % slides.length;
     updateCarousel();
   });
 
   left.addEventListener('click', () => {
-    if (index > 0) index--;
-    else index = slides.length - 1;
+    index = (index - 1 + slides.length) % slides.length;
     updateCarousel();
   });
 
@@ -170,9 +160,6 @@
     });
   });
 
-  // Optional: Auto-slide
-  // setInterval(() => { right.click(); }, 5000);
-
   document.querySelectorAll('.event-card img').forEach(img => {
     img.addEventListener('click', () => {
       const alreadyZoomed = img.classList.contains('zoomed');
@@ -181,16 +168,12 @@
         img.classList.add('zoomed');
       }
     });
-
-    // Optional: exit zoom on escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        img.classList.remove('zoomed');
-      }
+      if (e.key === 'Escape') img.classList.remove('zoomed');
     });
   });
 
-    document.querySelectorAll('.pastevent-card img').forEach(img => {
+  document.querySelectorAll('.pastevent-card img').forEach(img => {
     img.addEventListener('click', () => {
       const alreadyZoomed = img.classList.contains('zoomed');
       document.querySelectorAll('.pastevent-card img.zoomed').forEach(i => i.classList.remove('zoomed'));
@@ -198,16 +181,11 @@
         img.classList.add('zoomed');
       }
     });
-
-    // Optional: exit zoom on escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        img.classList.remove('zoomed');
-      }
+      if (e.key === 'Escape') img.classList.remove('zoomed');
     });
   });
 </script>
-
 
 </body>
 </html>
