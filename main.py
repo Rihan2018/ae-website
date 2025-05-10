@@ -15,9 +15,9 @@ def home():
     return send_from_directory(".", "index.html")
 
 @app.route("/styles/<path:filename>")
-def styles(filename):
+def serve_css(filename):
     return send_from_directory("styles", filename)
-    
+
 @app.route("/about.html")
 def about():
     return send_from_directory(".", "about.html")
