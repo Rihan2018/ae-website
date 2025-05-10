@@ -1,5 +1,5 @@
 import os
-from flask import Flask, send_file, abort
+from flask import Flask, send_file, abort, send_from_directory
 from jinja2 import Environment, FileSystemLoader
 from werkzeug.routing import Map, Rule
 
@@ -12,15 +12,15 @@ IMAGE_FOLDER = os.path.abspath("images")
 
 @app.route("/")
 def home():
-    return app.send_static_file("index.html")
+    return send_from_directory(".", "index.html")
 
 @app.route("/about.html")
 def about():
-    return app.send_static_file("about.html")
+    return send_from_directory(".", "about.html")
 
 @app.route("/gallery.html")
 def gallery():
-    return app.send_static_file("gallery.html")
+    return send_from_directory(".", "gallery.html")
 
 @app.route("/img/<path:filename>")
 def protected_image(filename):
