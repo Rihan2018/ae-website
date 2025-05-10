@@ -12,7 +12,7 @@ home_html = home_template.render(
     company=company_name,
     description="NORTH AMERICA CONCERT PROMOTER"
 )
-with open("home.html", "w") as f:
+with open("index.html", "w") as f:
     f.write(home_html)
 print("✅ home.html generated successfully.")
 
