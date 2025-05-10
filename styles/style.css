@@ -1,4 +1,3 @@
-/* 🔤 Basic setup */
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -7,7 +6,6 @@ body {
   color: #333;
 }
 
-/* 🧭 Header */
 .hero-header {
   background: linear-gradient(135deg, #000000 0%, #1f1f1f 100%);
   color: #fff;
@@ -18,7 +16,6 @@ body {
   text-align: center;
 }
 
-/* 📌 Logo - left aligned */
 .logo-fixed {
   position: absolute;
   top: 1.1rem;
@@ -29,7 +26,6 @@ body {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.1));
 }
 
-/* 🍔 Hamburger Menu - right aligned */
 .hamburger-menu {
   position: absolute;
   top: 1rem;
@@ -38,15 +34,14 @@ body {
 }
 
 .hamburger-icon {
-  font-size: 36px; /* Bigger icon size */
+  font-size: 36px; 
   cursor: pointer;
-  padding: 0px;    /* Smaller background box */
+  padding: 0px;    
   background-color: none;
   color: white;
   border-radius: 4px;
 }
 
-/* 📋 Dropdown menu */
 .menu-items {
   display: none;
   position: absolute;
@@ -160,16 +155,16 @@ body {
 .upcoming-events {
   background: #ffffff;
   border-radius: 15px;
-  padding: 0; /* Remove inner padding so header sits flush */
+  padding: 0; 
   margin: 30px auto;
   width: 90%;
   max-width: 1000px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  overflow: hidden; /* Ensures border radius applies to inner header */
+  overflow: hidden;
 }
 
 .section-header {
-  background-color: #f7f7f7; /* Light gray background */
+  background-color: #f7f7f7; 
   padding: 10px 10px;
   border-bottom: 1px solid #ddd;
 }
@@ -192,9 +187,9 @@ body {
 
 .event-card {
   display: flex;
-  flex-direction: column; /* Stack image on top of text */
+  flex-direction: column;
   width: 350px;
-  height: 400px; /* Fixed height */
+  height: 400px;
   background-color: #fafafa;
   border-radius: 12px;
   padding: 0;
@@ -207,7 +202,7 @@ body {
   width: 100%;
   max-height: 250px;
   height: auto;
-  object-fit: contain; /* 🔁 show full image without cropping */
+  object-fit: contain; 
   display: block;
   transition: transform 0.3s ease;
   cursor: zoom-in;
@@ -224,15 +219,15 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   background: white;
   padding: 5px;
-  max-width: 90vw;     /* Don't exceed 90% of screen width */
-  max-height: 90vh;    /* Don't exceed 90% of screen height */
+  max-width: 90vw;    
+  max-height: 90vh;    
   border-radius: 10px;
 }
 
 
 .event-info {
   font-size: 0.8em;
-  width: 100%; /* match image width */
+  width: 100%; 
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -262,8 +257,8 @@ body {
   font-size: 0.85em;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, transform 0.2s;
-  display: block;            /* Make sure it takes its own line */
-  margin-top: 10px;          /* Push it below the text */
+  display: block;            
+  margin-top: 10px;        
 }
 
 
@@ -309,10 +304,10 @@ body {
 
 .pastevent-card {
   display: flex;
-  flex-direction: column;  /* 🔁 stack image and content vertically */
+  flex-direction: column; 
   align-items: center;
-  width: fit-content;       /* 👈 match image width */
-  padding: 0;               /* remove padding */
+  width: fit-content;      
+  padding: 0;               
   border-radius: 12px;
   background-color: #fafafa;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -321,8 +316,8 @@ body {
 
 
 .pastevent-card img {
-  height: 300px;           /* Fixed size */
-  width: auto;             /* Keep aspect ratio */
+  height: 300px;          
+  width: auto;            
   display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -340,8 +335,8 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   background: white;
   padding: 5px;
-  max-width: 90vw;     /* Don't exceed 90% of screen width */
-  max-height: 90vh;    /* Don't exceed 90% of screen height */
+  max-width: 90vw;    
+  max-height: 90vh;   
   border-radius: 10px;
 }
 
@@ -356,7 +351,7 @@ footer {
   font-size: 0.95em;
   line-height: 1.6;
   color: #444;
-  margin: 20px; /* 👈 Adds space around the text inside the box */
+  margin: 20px; 
 }
 
 .contact-section {
@@ -364,9 +359,9 @@ footer {
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
-  background: none;       /* Remove background box */
-  box-shadow: none;       /* Remove shadow */
-  padding: 0;             /* Optional: reduce internal spacing */
+  background: none;      
+  box-shadow: none;      
+  padding: 0;            
   border-radius: 0; 
   font-family: 'Segoe UI', sans-serif;
 }
@@ -375,12 +370,12 @@ footer {
   font-size: 0.95em;
   line-height: 1.6;
   color: #444;
-  margin: 20px; /* 👈 Adds space around the text inside the box */
+  margin: 20px; 
 }
 
 .contact-btn {
   display: inline-block;
-  background: linear-gradient(to right, #f7f7f7, #e6e6e6); /* white/light-gray gradient */
+  background: linear-gradient(to right, #f7f7f7, #e6e6e6); 
   color: #000;
   padding: 8px 16px;
   border-radius: 20px;
@@ -443,8 +438,8 @@ footer {
 @media (max-width: 600px) {
   .scrolling-images {
     flex-direction: column;
-    padding: 10px;        /* reduce padding */
-    gap: 10px;            /* less spacing between cards */
+    padding: 10px;       
+    gap: 10px;           
   }
 
     .event-card {
@@ -456,7 +451,7 @@ footer {
     .event-card img {
       width: 100%;
       height: auto;
-      object-fit: contain;  /* Show entire image */
+      object-fit: contain;  
       display: block;
       border-radius: 12px 12px 0 0;
     }
@@ -473,14 +468,14 @@ footer {
     }
   
     .pastevent-card {
-      width: 100%;              /* Full width on small screens */
+      width: 100%;             
       max-width: none;
       align-items: stretch;
     }
   
     .pastevent-card img {
       width: 100%;
-      height: auto;             /* Let height scale naturally */
+      height: auto;           
       border-radius: 8px;
     }
 

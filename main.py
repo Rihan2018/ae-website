@@ -2,6 +2,30 @@ import os
 import subprocess
 import sys
 
+from flask import Flask, send_file, abort
+import os
+
+app = Flask(__name__, static_folder=".", static_url_path="")
+
+@app.route("/")
+def home():
+    return app.send_static_file("index.html")
+
+@app.route("/about.html")
+def about():
+    return app.send_static_file("about.html")
+
+@app.route("/gallery.html")
+def gallery():
+    return app.send_static_file("gallery.html")
+
+@app.route("/img/<path:filename>")
+def protected_image(filename):
+    full_path = os.path.join("images", filename)
+    if os.path.exists(full_path):
+        return send_file(full_path)
+    return abort(404)
+
 def run_command(cmd, check=True, capture_output=False, desc=None):
     if desc:
         print(desc)
@@ -69,3 +93,10 @@ run_command(["git", "branch", "-M", "main"], check=False)
 run_command(["git", "pull", "origin", "main", "--rebase"], desc="🔄 Pulling latest changes from remote...")
 
 run_command(["git", "push", "-u", "origin", "main"])
+
+from app import app
+
+if __name__ == "__main__":
+    print("\n🚀 Starting Flask server at http://127.0.0.1:5000/")
+    app.run(debug=True)
+
