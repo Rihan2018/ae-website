@@ -1,12 +1,34 @@
 from jinja2 import Environment, FileSystemLoader
+from werkzeug.routing import Map, Rule
 import os
 
-# Setup Jinja2 environment to load from the templates directory
+# --------------------------
+# Setup Jinja2 environment
+# --------------------------
 env = Environment(loader=FileSystemLoader('templates'))
 
+# --------------------------
+# Fake Flask-style url_for
+# --------------------------
+url_map = Map([
+    Rule('/img/<path:filename>', endpoint='protected_image')
+])
+url_adapter = url_map.bind('localhost')
+
+def build_url(endpoint, **values):
+    return url_adapter.build(endpoint, values)
+
+# Make this function available in Jinja templates
+env.globals['url_for'] = build_url
+
+# --------------------------
+# Shared context
+# --------------------------
 company_name = "Astronaut Entertainment"
 
-# ✅ Render home page
+# --------------------------
+# Render home page
+# --------------------------
 home_template = env.get_template('home.html.j2')
 home_html = home_template.render(
     company=company_name,
@@ -14,9 +36,11 @@ home_html = home_template.render(
 )
 with open("index.html", "w") as f:
     f.write(home_html)
-print("✅ home.html generated successfully.")
+print("✅ index.html generated successfully.")
 
-# ✅ Render about page
+# --------------------------
+# Render about page
+# --------------------------
 about_template = env.get_template('about.html.j2')
 about_html = about_template.render(
     company=company_name,
@@ -31,7 +55,9 @@ with open("about.html", "w") as f:
     f.write(about_html)
 print("✅ about.html generated successfully.")
 
-# ✅ Dynamically build gallery categories
+# --------------------------
+# Dynamically build gallery
+# --------------------------
 gallery_base = "images/Gallery"
 gallery_categories = {}
 
@@ -47,7 +73,9 @@ if os.path.exists(gallery_base):
 else:
     print("⚠️ Warning: 'images/Gallery' folder not found.")
 
-# ✅ Render gallery page
+# --------------------------
+# Render gallery page
+# --------------------------
 gallery_template = env.get_template('gallery.html.j2')
 gallery_html = gallery_template.render(
     company=company_name,
