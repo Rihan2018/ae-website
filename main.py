@@ -24,20 +24,6 @@ def about():
 def gallery():
     return app.send_static_file("gallery.html")
 
-@app.route("/img/<path:filename>")
-def protected_image(filename):
-    # 🔐 Optional Protection (e.g. secret header or future session check)
-    token = request.headers.get("X-Auth-Token")
-    if token != "your-secret-token":  # Change/remove as needed
-        return abort(403)
-
-    full_path = os.path.join(IMAGE_FOLDER, filename)
-    if not os.path.abspath(full_path).startswith(IMAGE_FOLDER):
-        return abort(403)
-    if os.path.exists(full_path):
-        return send_file(full_path)
-    return abort(404)
-
 # --------------------------------
 # 2. Jinja2 Static Site Generation
 # --------------------------------
